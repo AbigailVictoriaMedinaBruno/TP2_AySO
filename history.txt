@@ -118,7 +118,7 @@
   118  git add .
   119  cd ..
   120  git add .
-  121  cd repogit/
+  121* 
   122  ls 
   123  mv historial_comandos.txt TP2_AySO/
   124  ls
@@ -131,7 +131,63 @@
   131  git config --global user.name "Abigail Victoria Medina Bruno"
   132  git commit -m "ADD: añadiel historial de comandos hasta el punto 4. Resolviendo el punto 5."
   133  git status
-  134  git push
+  134* 
   135  history
   136  rm historial_comandos.txt 
   137  history > history.txt
+  138  ls
+  139  git add .
+  140  git status
+  141  git commit -m "FIX: añadi el historial de comandos hasta el punto 4. Resolviendo el punto 5. Borre el anterior TXT porque no tenía el nombre indicado"
+  142  git push
+  143  sudo poweroff
+  144  lsblk
+  145* 
+  146  sudo fdisk /dev/sdd
+  147  lsblk
+  148  sudo fdisk /dev/sdd
+  149  lsblk
+  150  sudo fdisk /dev/sdd
+  151  lsblk
+  152  sudo fdisk /dev/sdd
+  153  lsblk
+  154  sudo mkfs.ext4 /dev/sdd1
+  155  sudo mkfs.ext4 /dev/sdd2
+  156  sudo mkfs.ext4 /dev/sdd3
+  157  sudo mkfs.ext4 /dev/sdd4
+  158  sudo mkfs.ext4 /dev/sdd5
+  159  sudo mkfs.ext4 /dev/sdd6
+  160  sudo mkfs.ext4 /dev/sdd7
+  161  sudo mkdir /mnt/{p(1..6)}
+  162  sudo -p mkdir /mnt/p{1..6}
+  163  sudo mkdir -p /mnt/p{1..6}
+  164  cd ..
+  165  cd mnt
+  166  tree
+  167  tree salvas
+  168  sudo mount /dev/ssd1 /mnt/p1
+  169  sudo mount /dev/sdd1 /mnt/p1
+  170  sudo mount /dev/sdd2 /mnt/p2
+  171  sudo mount /dev/sdd3 /mnt/p3
+  172  sudo mount /dev/sdd4 /mnt/p4
+  173  sudo mount /dev/sdd5 /mnt/p5
+  174  sudo mount /dev/sdd6 /mnt/p6
+  175  sudo mount /dev/sdd7 /mnt/p7
+  176  tree
+  177  lsblk
+  178  rm p4
+  179  rm p4 -f
+  180  rm -rf p4
+  181  sudo rm -rf p4
+  182  tree
+  183  sudo mkdir -p /mnt/p7
+  184  sudo mount /dev/sdd7 /mnt/p7
+  185  tree
+  186  history -a
+  187  history
+  188  cd
+  189  re
+  190  cd repogit/
+  191  tree
+  192  cd TP2_AySO/
+  193  history > history.txt
