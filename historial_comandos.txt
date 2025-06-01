@@ -1,0 +1,114 @@
+    1  sudo apt install bzip2
+    2  sudo apt install tree
+    3  sudo apt update && sudo apt upgrade
+    4  sudo pvs
+    5  sudo apt install lvm2
+    6  sudo pvs
+    7  df -h
+    8  lsblk
+    9  sudo fdisk /dev/sdb
+   10  lsblk
+   11  sudo fdisk /dev/sdc
+   12  lsblk
+   13  sudo fdisk /dev/sdd
+   14  lsblk
+   15  sudo pvcreate /dev/sdb1 /dev/sdc1 /dev/sdd1 
+   16  sudo vgcreate nodocentral /dev/sdb1 /dev/sdc1
+   17  sudo vgcreate nodocentral /dev/sdd1
+   18  sudo vgextend nodocentral /dev/sdd1
+   19  sudo vgs
+   20  sudo lsof /dev/sdb1
+   21  sudo umount /dev/sdb1
+   22  ls -l
+   23  man grep ssh
+   24  man ssh
+   25  ssh -e
+   26  agent ssh
+   27  ssh-keygen -t ed25519
+   28  cat ~/.ssh/id_ed25519.pub
+   29  }
+   30  mkdir repogit
+   31  ls -l
+   32  cd repogit/
+   33  git clone git@github.com:AbigailVictoriaMedinaBruno/TP2_AySO.git
+   34  sudo apt install git
+   35  git clone git@github.com:AbigailVictoriaMedinaBruno/TP2_AySO.git
+   36  sudo lvcreate -L 3G -n sitios nodocentral
+   37  sudo lvcreate -L 3G -n salvas nodocentral
+   38  sudo mkfs.ext4 /dev/nodocentral/sitios
+   39  sudo mkfs.ext4 /dev/nodocentral/salvas
+   40  sudo vgdisplay nodocentral
+   41  sudo lvextend -L +1G /dev/nodocentral/sitios
+   42  sudo lvextend -L +2G /dev/nodocentral/salvas
+   43  sudo mkfs.ext4 /dev/nodocentral/salvas
+   44  sudo mkfs.ext4 /dev/nodocentral/sitios
+   45  sudo mkdir /mnt/sitios
+   46  sudo mkdir /mnt/salvas
+   47  sudo mount /dev/nodocentral/sitios /mnt/sitios
+   48  sudo mount /dev/nodocentral/salvas /mnt/salvas
+   49  sudo resize2fs /dev/nodocentral/sitios
+   50  sudo resize2fs /dev/nodocentral/salvas
+   51  sudo echo "Archivo de prueba" > /mnt/sitios/prueba.txt
+   52  sudo su
+   53  history
+   54  sudo lvs
+   55  mount | grep salvas
+   56  sudo umount /dev/nodocentral/salvas
+   57  sudo umount /dev/nodocentral/sitios
+   58  sudo lvs
+   59  mount | grep salvas
+   60  mount | grep sitios
+   61  sudo lvremove /dev/nodocentral/sitios
+   62  sudo lvremove /dev/nodocentral/salvas
+   63  sudo lvs
+   64  }
+   65  sudo lvs
+   66  sudo vgs
+   67  sudo lvremove /dev/nodocentral/sitios
+   68  sudo vgremove nodocentral
+   69  lsblk
+   70  sudo pvremove /dev/sdb1
+   71  sudo pvremove /dev/sdc1
+   72  sudo pvremove /dev/sdd1
+   73  lsblk
+   74  sudo pvremove /dev/sdd
+   75  sudo fdisk /dev/sdb
+   76  lsblk
+   77  sudo fdisk /dev/sdc
+   78  lsblk
+   79  sudo fdisk /dev/sdd
+   80  lsblk
+   81  sudo pvremove /dev/sdb
+   82  sudo pvremove /dev/sdc
+   83  sudo pvremove /dev/sdd
+   84  sudo pvs
+   85  lsblk
+   86  sudo fdisk -l
+   87  sudo fdisk /dev/sdb
+   88  lsblk
+   89  sudo fdisk /dev/sdd
+   90  lsblk
+   91  sudo fdisk /dev/sdd
+   92  lsblk
+   93  sudo fdisk /dev/sdd
+   94  lsblk
+   95  sudo fdisk /dev/sdd
+   96  sudo umount /dev/sdd
+   97  lsblk
+   98  sudo umount /dev/sdd
+   99  sudo fdisk /dev/sdd
+  100  p
+  101  sudo fdisk /dev/sdd
+  102  p
+  103  sudo fdisk /dev/sdd
+  104  lsblk
+  105  history
+  106  history -a 
+  107  history > ./repogit/history.txt
+  108  sudo history > ./repogit/history.txt
+  109  sudo history > /repogit/history.txt
+  110  cat history
+  111  sudo history > historial_comandos.txt
+  112  sudo history -a > historial_comandos.txt
+  113  history
+  114  history > historial_comandos.txt
